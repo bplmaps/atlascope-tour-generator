@@ -5,9 +5,9 @@ import { createNewStory } from "./faunaFunctions";
 
 
 let textFields = [
-  {label: "Story Title", identifier: "title", value: ""},
-  {label: "Story Subtitle", identifier: "subtitle", value: ""},
-  {label: "Author", identifier: "author", value: ""}
+{label: "Story Title", identifier: "title", value: ""},
+{label: "Story Subtitle", identifier: "subtitle", value: ""},
+{label: "Author", identifier: "author", value: ""}
 ]
 
 let processing = false;
@@ -15,9 +15,9 @@ let completed = false;
 let completedId;
 
 function newStory() {
-  processing = true;
-  createNewStory({title: textFields[0].value, subtitle: textFields[1].value, author: textFields[2].value })
-    .then((successfulId)=>{ processing=false; completed=true; completedId=successfulId})
+processing = true;
+createNewStory({title: textFields[0].value, subtitle: textFields[1].value, author: textFields[2].value })
+  .then((successfulId)=>{ processing=false; completed=true; completedId=successfulId})
 }
 
 let dispatcher = createEventDispatcher();
