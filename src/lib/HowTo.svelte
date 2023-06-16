@@ -36,7 +36,7 @@
       <li>Think about what places you move through in your daily life that you find interesting. How did they come to be that way?</li>
       <li>What did your neighborhood look like 100 years ago? 150 years ago?</li>
       <li>Pick a current stop on the T — what did that area look like in the past?</li>
-      <li>Poke through the Digital Commonwealth photograph collection — is there any subject that interests you?</li>
+      <li>Poke through the <a href="https://www.digitalcommonwealth.org/" target="_blank" rel="noreferrer">Digital Commonwealth</a> photograph collection — is there any subject that interests you?</li>
     </ul>
   </div>
 
@@ -44,7 +44,7 @@
     <h1 class="text-lg font-bold">Things to Consider</h1>
     <ul class="ml-5 pt-2">
       <li>Think carefully about what atlas layers can best help tell your story. At each tour stop, which base layer helps complement what's shown in the overlay layer?</li>
-      <li>Keeping captions for tour stops between 50-150 words works best. Going much longer than that means that the text might cover the map for a reader.</li>
+      <li>Keeping captions for tour stops between 50-150 words works best. Going much longer than that means that the text might cover the map for a viewer.</li>
     </ul>
   </div>
 
