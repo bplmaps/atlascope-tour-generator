@@ -20,11 +20,10 @@
     <h1 class="text-lg font-bold">How to Make a Tour</h1>
     <ol class="ml-5 pt-2">
       <li>Click the "Create New Story" button and you will be prompted to enter a Title, Subtitle, and Author for your tour. These can be placeholders if you're not ready to commit to a title — you'll be able to edit them later. Hit the "Create Story" button.</li>
-      <li><strong>Save the Story ID that is shown on the next screen — this will be how you are able to edit your story in the future.</strong> You can use or download the Tour Building Worksheet below as a place to both save your Tour ID and plan out the content of the tour. You can make a copy of the worksheet by going to File -> Make a Copy.
-        <br><button class="bg-blue-900 text-white font-bold py-2 px-3 rounded"><a href="https://docs.google.com/spreadsheets/d/1vawoofb1hLPiVY_LsvqFXyiws-6oR91fMtH_axiKBLc/edit#gid=0" target="_blank" rel="noreferrer">Get Tour Planning Worksheet</a></button>
+      <li><strong>Save the Story ID that is shown on the next screen — this will be how you are able to edit your story in the future.</strong> You can use or download the <a href="https://docs.google.com/spreadsheets/d/1vawoofb1hLPiVY_LsvqFXyiws-6oR91fMtH_axiKBLc/edit#gid=0" target="_blank" rel="noreferrer">Tour Building Worksheet</a> as a place to both save your Tour ID and plan out the content of the tour. You can make a copy of the worksheet by going to File -> Make a Copy.
       </li>
       <li>Click the "Edit my new story" button to begin adding content to the tour.</li>
-      <li>For each "stop" on your tour, you'll need to add a caption and a link to a location from <a href="https://www.atlascope.org/" target="_blank" rel="noreferrer">Atlascope</a>. You can get the link to the specific view by using the "Share" tab and then selecting the toggle to "View Link".</li>
+      <li>For each "stop" on your tour, you'll need to add a caption and a link to a location from <a href="https://www.atlascope.org/" target="_blank" rel="noreferrer">Atlascope</a>. Move to the location you'd like to feature and select your desired atlas layers for both the overlay and the base layers. You can get the link to the specific view by using the "Share" tab and then selecting the toggle to "View Link".</li>
       <li>You can preview your tour at any point by clicking the blue preview button ("Open this story in Atlascope app") in the top left of the screen.</li>
     </ol>
   </div>
@@ -63,6 +62,16 @@ section {
 p {
   padding-top: 4px;
 }
+
+p a {
+    color: maroon;
+    background-image: linear-gradient(0deg,rgba(0,102,136,.2) 10%,transparent 0);
+}
+
+li > a {
+    color: maroon;
+    background-image: linear-gradient(0deg,rgba(0,102,136,.2) 10%,transparent 0);
+  }
 
 ul { 
    list-style-type: disc; 
