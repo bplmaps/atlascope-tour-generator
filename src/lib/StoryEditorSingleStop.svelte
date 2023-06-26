@@ -22,7 +22,7 @@
       stopData.overlay = urlParams.overlay;
       stopData.zoom = +urlParams.zoom;
       stopData.center = urlParams.center.split(",").map(x=>+x);
-      stopData.overlayMode = urlParams.mode;
+      stopData.viewMode = urlParams.mode;
     } else {
       window.alert("That doesn't seem like a valid Atlascope view link");
       e.target.value = viewURL;
