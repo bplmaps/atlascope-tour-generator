@@ -23,7 +23,7 @@
       overlay: "",
       zoom: 0,
       center: [0, 0],
-      mode: "",
+      viewMode: "",
     }
 
     if(!storyData.stops) {
