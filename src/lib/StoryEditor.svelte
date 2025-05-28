@@ -1,6 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
-  import { loadStory, saveStory } from "./faunaFunctions";
+  import { loadStory, saveStory } from "./supabaseFunctions";
   import StoryEditorSingleStop from "./StoryEditorSingleStop.svelte";
 
   export let storyId;
@@ -26,17 +26,17 @@
       viewMode: "",
     }
 
-    if(!storyData.stops) {
-      storyData.stops = [nakedStop]
+    if(!storyData[0].stopsJson) {
+      storyData[0].stopsJson = [nakedStop]
     } else {
-    storyData.stops.splice(idx, 0, nakedStop);
+    storyData[0].stopsJson.splice(idx, 0, nakedStop);
     }
-    storyData.stops = storyData.stops;
+    storyData[0].stopsJson = storyData[0].stopsJson;
   }
 
   function deleteStop(idx) {
-    storyData.stops.splice(idx, 1);
-    storyData.stops = storyData.stops;
+    storyData[0].stopsJson.splice(idx, 1);
+    storyData[0].stopsJson = storyData[0].stopsJson;
   }
 
   function save() {
@@ -73,16 +73,16 @@
       <h3 class="text-md font-bold">Metadata</h3>
       <div class="mb-6">
         <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
-        <input type="text" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" bind:value={storyData.metadata.title} required>
+        <input type="text" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" bind:value={storyData[0].metadataJson.title} required>
       </div>
       <div class="mb-6">
         <label for="subtitle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Subtitle</label>
-        <input type="text" id="subtitle" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" bind:value={storyData.metadata.subtitle}>
+        <input type="text" id="subtitle" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" bind:value={storyData[0].metadataJson.subtitle}>
   
       </div>
       <div class="mb-6">
         <label for="author" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Author</label>
-        <input type="text" id="author" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" bind:value={storyData.metadata.author}>
+        <input type="text" id="author" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" bind:value={storyData[0].metadataJson.author}>
   
       </div>
   
@@ -90,8 +90,8 @@
 
 
       <div>
-        {#if storyData.stops && storyData.stops.length > 0}
-          {#each storyData.stops as stop, idx}
+        {#if storyData[0].stopsJson && storyData[0].stopsJson.length > 0}
+          {#each storyData[0].stopsJson as stop, idx}
             <StoryEditorSingleStop
               bind:stopData={stop}
               {idx}
@@ -108,7 +108,7 @@
         {/if}
 
         <div>
-          <button class="bg-green-900 text-white rounded p-2 text-semibold" on:click={()=>{ addStop(storyData.stops ? storyData.stops.length : 0) }}
+          <button class="bg-green-900 text-white rounded p-2 text-semibold" on:click={()=>{ addStop(storyData[0].stopsJson ? storyData[0].stopsJson.length : 0) }}
             >+ Add a new stop</button
           >
         </div>
